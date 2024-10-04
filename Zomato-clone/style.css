@@ -1,0 +1,734 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden; /* To Avoids horizontal scroll */
+}
+
+/* General styling for the navbar */
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 10px 20px;
+    z-index: 10;
+    background-color: transparent; /* Transparent navbar on top of hero section */
+}
+
+.nav-ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    padding: 1.7rem 0;
+}
+
+/* Left side item */
+.items-left {
+    margin-right: auto;
+}
+
+/* Right side items */
+.items-right {
+    margin-left: 20px;
+}
+
+.nav-ul li a {
+    text-decoration: none;
+    color: white; /* White text to stand out on hero image */
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-ul li a:hover {
+    color: #f63;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 600px; /* Increased height for larger hero effect */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Sticky Navbar when scrolling */
+.sticky-nav {
+    position: fixed;
+    background-color: white;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+}
+
+.sticky-nav .nav-ul li a {
+    color: #333;
+}
+
+.sticky-nav .nav-ul li a:hover {
+    color: #f63;
+}
+
+/* Zomato Text Styling */
+.contents-container {
+    position: relative;
+    z-index: 2; /* Make sure it's above the hero image */
+    text-align: center;
+    color: white;
+    width: 100%;
+    padding-top: 2rem;
+}
+
+/* Zomato logo */
+.comp-text {
+    margin-bottom: 1rem;
+}
+
+.comp-logo-text {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Sub-text below the logo */
+.sub-text {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.span-Noida {
+    font-weight: 600;
+    color: #ff645a;
+}
+
+/* SearchContainer */
+.searchContainer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.searchflex {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    background: rgb(255, 255, 255);
+    border-radius: 0.8rem;
+    box-shadow: rgba(28, 28, 28, 0.08) 0px 2px 8px;
+    border: 1px solid rgb(232, 232, 232);
+    width: 100%;
+    max-width: 70rem;
+}
+
+/* Left Search */
+.left-search {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 1rem;
+    gap: 0.5rem;
+}
+
+/* Location Icon */
+.loc-logo {
+    font-size: 1.5rem;
+    color: #ff645a;
+    cursor: pointer;
+}
+
+/* Input Text */
+.input-text {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #333;
+    width: 10rem;
+}
+
+/* Dropdown Icon */
+.dropdown-icon {
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Right Search */
+.right-search {
+    display: flex;
+    align-items: center;
+    border-left: 1px solid #ddd;
+    padding-left: 1rem;
+    width: 100%;
+    position: relative;
+}
+
+/* Search Icon */
+.search-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #ff645a;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+/* Search Input */
+.search-input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+    color: #333;
+    padding-right: 1rem;
+}
+
+
+/* Card Sections */
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    width: 1100px;
+    height: 1231px;
+    margin-left: 199px;
+    margin-right: 199px;
+    margin-top: 50px;
+}
+
+.card-section {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card-1, .card-2, .card-3 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: calc(192px + 84px);
+    width: 353px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card-1:hover, .card-2:hover, .card-3:hover {
+    transform: scale(1.05);
+}
+
+.card-1 {
+    background-color: rgb(203, 182, 182);
+}
+
+.card-2 {
+    background-color: red;
+}
+
+.card-3 {
+    background-color: aqua;
+}
+
+/* Positioning the text over the image */
+.card-1 img, .card-2 img, .card-3 img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-text, .text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* background-color: rgba(255, 255, 255, 0.8); Semi-transparent white background */
+   background-color: white;
+    padding: 10px;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+/* Hover effect to darken image slightly */
+.card-1:hover img, .card-2:hover img, .card-3:hover img {
+    filter: brightness(80%);
+}
+
+.card1-title, .card2-title, .card3-title {
+    text-align: left;
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-left: 10px;
+    line-height: 3.2rem;
+    z-index: 2;
+}
+
+.card1-para, .card2-para, .card3-para {
+    color: #333;
+    margin-left: 10px;
+    z-index: 2;
+}
+
+/* Collections Sections */
+
+
+.coll-parent{
+margin-top: 80px;
+
+}
+.collection-heading{
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 500;
+    color: rgb(28, 28, 28);
+    margin: 0;
+}
+
+.collection-para{
+    line-height: 1.4;
+    font-weight: 300;
+    color: rgb(54, 54, 54);
+    font-size: 1.2rem;
+}
+
+/* collection images card */
+
+.collection-container{
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.imgcard-1, .imgcard-2, .imgcard-3, .imgcard-4 {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.imgcard-1:hover, .imgcard-2:hover, .imgcard-3:hover, .imgcard-4:hover {
+    transform: scale(1.05);
+}
+
+.imgcard-1 img, .imgcard-2 img, .imgcard-3 img, .imgcard-4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Transparent section overlay inside each imgcard */
+.imgcard-1 section, .imgcard-2 section, .imgcard-3 section, .imgcard-4 section {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black transparent overlay */
+    color: white;
+    padding: 10px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.imgcard-1 section p, .imgcard-2 section p, .imgcard-3 section p, .imgcard-4 section p {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 200;
+}
+
+.imgcard-1 section div, .imgcard-2 section div, .imgcard-3 section div, .imgcard-4 section div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.fa-arrow-right {
+    margin-left: 5px;
+    transition: margin-left 0.3s ease;
+}
+
+/* Hover effect on section arrow icon */
+.imgcard-1:hover .fa-arrow-right, .imgcard-2:hover .fa-arrow-right, 
+.imgcard-3:hover .fa-arrow-right, .imgcard-4:hover .fa-arrow-right {
+    margin-left: 10px;
+}
+
+/* Hover effect to darken the image slightly */
+.imgcard-1:hover img, .imgcard-2:hover img, .imgcard-3:hover img, .imgcard-4:hover img {
+    filter: brightness(80%);
+}
+
+
+ /* Popular Localities  sections       */
+
+ .localities-container {
+    width: 1100px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+}
+
+.localities-container h1 {
+    font-size: 2rem;
+    color: rgb(28, 28, 28);
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.localities-container h1 span {
+    font-weight: 600;
+}
+
+/* Grid Layout */
+.locality-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Card Design */
+.locality-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.locality-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.locality-name {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.locality-places {
+    font-size: 1rem;
+    color: gray;
+    margin: 0;
+}
+
+.arrow {
+    font-size: 1.2rem;
+    color: black;
+}
+
+/* See More Section */
+.see-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.see-more p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* -------->Get the Zomato app */
+.app-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: -100px;
+    background-color: white;
+}
+
+/* Phone Image Section */
+.phone-image img {
+    height: 450px;
+    width: auto;
+}
+
+/* Right Section: App Info */
+.app-info {
+    width: 450px;
+}
+
+.app-info h1 {
+    font-size: 2.5rem;
+    font-weight: 450;
+    margin-bottom: 15px;
+}
+
+.app-info p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Input Options */
+.input-option {
+   
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input-option input {
+    margin-right: 5px;
+}
+
+.input-option label {
+    margin-right: 20px;
+}
+
+/* Form Section */
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input-container input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.input-container button {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 12px 10px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.input-container button:hover {
+    background-color: #ff6666;
+}
+
+/* Download Text */
+.download-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* App Download Buttons */
+.app-download-buttons img {
+    width: 150px;
+    margin-right: 10px;
+}
+
+/* Explore options near me */
+.explore-container {
+    width: 1100px;
+    margin: 50px auto;
+    background-color: white;
+    /* border: 1px solid #ddd; */
+    padding: 0;
+}
+
+/* Header Section */
+.header-section {
+    padding: 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-title {
+    font-size: 2rem;
+    color: #333;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* List Section */
+.list-section {
+    padding: 20px;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.list-item:last-child {
+    border-bottom: none;
+}
+
+.list-text {
+    font-size: 1.25rem;
+    color: #333;
+}
+
+
+/* Dimension Settings */
+.container {
+    width: 1100px;
+    height: auto;
+}
+
+.header-title {
+    width: 1100px;
+    height: 50px;
+}
+
+.list-section {
+    height: 400px;
+}
+
+.list-item {
+    height: 100px;
+}
+
+
+/* Footer  sections */
+
+
+  
+.zomato-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 200px;
+    background-color: #f6ebf6;
+  }
+  
+  .zomato-footer-top {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .zomato-footer-top1 {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .zomato-footer h2 {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .zomato-lang {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .zomato-lang select {
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+  
+  .zomato-footer-bottom1 {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .zomato-footer-bottomContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .zomato-footer h4 {
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: 0.1rem;
+  }
+  
+  .zomato-footer p {
+    color: grey;
+    text-transform: capitalize;
+  }
+  
+  .zomato-links {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .zomato-icon {
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 50%;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .zomato-icon:hover {
+    background-color: gray;
+    color: white;
+  }
+  
+  .zomato-footer img {
+    width: 150px;
+  }
+  
+  .zomato-footer-bottom p {
+    text-align: start;
+    color: gray;
+    font-size: 14px;
+  }
+  
+  .zomato-footer hr {
+    border: 1px solid #ddd;
+  }
+  
+  
